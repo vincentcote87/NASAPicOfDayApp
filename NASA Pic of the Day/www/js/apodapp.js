@@ -54,7 +54,8 @@ function getApod2() { // when readystate changes
 }
 
 
-function populate(data, date) {	
+function populate(data, date) {
+  document.getElementById("loadingIcon").style.display = "none";
 	document.getElementById(date + "-image").src = data.url;
 	document.getElementById(date + "-title").innerHTML = data.title;
 	document.getElementById(date + "-copyright").innerHTML = data.copyright;

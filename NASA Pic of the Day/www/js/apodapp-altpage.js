@@ -1,6 +1,6 @@
 var xmlhttp;
-var pagename = "page2"; /* REPLACE WITH ROUTE NAME FOR API PAGE */
-var key = "UqT55S8vClvX26OQ8GW4yM4ryzTAdTa8D8Vp2hgz" /* replace with your own */
+var pagename = "home"; /* REPLACE WITH ROUTE NAME FOR API PAGE */
+var key = "aPC7H51uLXeWxkYcSNHD3NpuR0lnGwHcX5miD4PR" /* replace with your own */
 var apodURL = "https://api.nasa.gov/planetary/apod?api_key=" + key;
 
 
