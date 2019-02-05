@@ -60,15 +60,10 @@ function populate(data, date) {
   switch (data.media_type) {
     case "video":
       el = document.createElement("iframe");
-      // el.id = date + "-image";
-      // el.className = "nasaPic";
-      // document.getElementById(date + "-block").appendChild(el);
+      el.setAttribute('frameborder', '0');
       break;
     default:
       el = document.createElement("img");
-      // el.id = date + "-image";
-      // el.className = "nasaPic";
-      // document.getElementById(date + "-block").appendChild(el);
       break;
   }
   el.id = date + "-image";

@@ -56,20 +56,19 @@ function getApod2() { // when readystate changes
 
 function populate(data, date) {
   console.log(data.media_type);
+  var el;
   switch (data.media_type) {
     case "video":
-      var el = document.createElement("iframe");
-      el.id = date + "-image";
-      el.className = "nasaPic";
-      document.getElementById(date + "-block").appendChild(el);
+      el = document.createElement("iframe");
+      el.setAttribute('frameborder', '0');
       break;
     default:
-      var el = document.createElement("img");
-      el.id = date + "-image";
-      el.className = "nasaPic";
-      document.getElementById(date + "-block").appendChild(el);
+      el = document.createElement("img");
       break;
   }
+  el.id = date + "-image";
+  el.className = "nasaPic";
+  document.getElementById(date + "-block").appendChild(el);
 
   document.getElementById(date + "-loadingIcon").style.display = "none";
   document.getElementById(date + "-imgCredit").style.display = "block";
