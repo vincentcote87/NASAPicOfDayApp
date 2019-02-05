@@ -11,55 +11,39 @@
 
 <body>
   <div id="app">
-    <!-- <div class="panel panel-left panel-reveal">
-            ... panel content goes here ...
-        </div>
-        <div class="panel panel-right panel-reveal">
-            ... panel content goes here ...
-        </div> -->
     <div class="view view-main">
       <div class="page" data-name="home">
-        <!-- <div class="navbar">
-                    <div class="navbar-inner">
-                        <div class="left"><a href="#" data-panel="left" class="panel-open">Left</a></div>
-                        <div class="title">Page Title</div>
-                        <div class="right"><a href="#" data-panel="right" class="panel-open">Right</a></div>
-                    </div>
-                </div> -->
-        <!-- <div class="toolbar tabbar toolbar-bottom-md">
-                    <div class="toolbar-inner">
-                        <a href="#" class="link">Home</a>
-                        <a href="/page2/" class="link">Page 2</a>
-                        <a href="#" class="link">Link 3</a>
-                    </div>
-                </div> -->
         <div class="page-content">
-          <div class="swiper-container">
-            <!-- Slides wrapper -->
+          <div class="swiper-container" data-pagination='{"el": ".swiper-pagination"}'>
+            <div class="swiper-pagination"></div>
             <div class="swiper-wrapper">
-              <!-- Slides -->
               <div class="swiper-slide">
-                <div class="preloader loadingIcon" id="yd-loadingIcon" style="width: 44px; height: 44px;"></div>
-                <img id="yd-image" class="nasaPic">
-                <div class="block" id="yd-imgCredit">
-                  <p><a class="link popup-open" href="#" data-popup=".popup-credits">Credits</a></p>
+                <div class="block-title">Yesterday's Image</div>
+                <div class="block">
+                  <div class="preloader loadingIcon" id="yd-loadingIcon" style="width: 44px; height: 44px;"></div>
+                  <img id="yd-image" class="nasaPic">
+                  <iframe id="yd-image" class="nasaPic" frameborder="0"></iframe>
+                </div>
+                <div class="block imgCredit" id="yd-imgCredit">
+                  <p><a class="link popup-open" href="#" data-popup=".popup-credits-yd">Credits</a></p>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="preloader loadingIcon" id="td-loadingIcon" style="width: 44px; height: 44px;"></div>
-                <!-- <img id="td-image" class="nasaPic"> -->
-                <iframe id="td-image" class="nasaPic" frameborder="0"></iframe>
-                <div class="block" id="td-imgCredit">
-                  <p><a class="link popup-open" href="#" data-popup=".popup-credits">Credits</a></p>
+                <div class="block-title">Today's Image</div>
+                <div class="block">
+                  <div class="preloader loadingIcon" id="td-loadingIcon" style="width: 44px; height: 44px;"></div>
+                  <iframe id="td-image" class="nasaPic" frameborder="0"></iframe>
+                </div>
+
+                <div class="block imgCredit" id="td-imgCredit">
+                  <p><a class="link popup-open" href="#" data-popup=".popup-credits-td">Credits</a></p>
                 </div>
               </div>
             </div>
-            <!-- Pagination, if required -->
-            <div class="swiper-pagination"></div>
           </div>
 
-          <div class="popup popup-credits">
-            <div class="block">
+          <div class="popup popup-credits-td">
+            <div class="block page-content">
               <h2>Image Credit</h2>
               <!-- Close Popup -->
               <p><a class="link popup-close" href="#">Close popup</a></p>
@@ -67,6 +51,19 @@
                 <span id="td-copyright"></span><br><br>
                 <span id="td-title"></span><br><br>
                 <span id="td-explanation"></span>
+              </p>
+            </div>
+          </div>
+
+          <div class="popup popup-credits-yd">
+            <div class="block page-content">
+              <h2>Image Credit</h2>
+              <!-- Close Popup -->
+              <p><a class="link popup-close" href="#">Close popup</a></p>
+              <p>
+                <span id="yd-copyright"></span><br><br>
+                <span id="yd-title"></span><br><br>
+                <span id="yd-explanation"></span>
               </p>
             </div>
           </div>
