@@ -23,7 +23,12 @@
   /* grid-column: 1; */
 }
 
-.imgCredit {
+#imgCredit {
   position: fixed;
   bottom: 20px;
+  display: none;
+}
+
+.popup-credits {
+  opacity: .8;
 }
