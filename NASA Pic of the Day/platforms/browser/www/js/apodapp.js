@@ -55,7 +55,6 @@ function getApod2() { // when readystate changes
 
 
 function populate(data, date) {
-  console.log(data.media_type);
   var el;
   switch (data.media_type) {
     case "video":
