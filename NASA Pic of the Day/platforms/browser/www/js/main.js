@@ -1,14 +1,5 @@
 var app = new Framework7({
-  root: "#app",
-  // routes: [
-  //   {
-  //     path: '/home/',
-  //     url: '../index.html'
-  //   },
-  //   { path: '/page2/',
-  //     url: '../pages/page2.html'
-  //   }
-  // ]
+  root: "#app"
 })
 
 var mainView = app.views.create('.view-main');
@@ -18,4 +9,6 @@ var swiper = app.swiper.create('.swiper-container', {
   spaceBetween: 100
 });
 
+// Having the yesterdays photo be on the left seems more intuative to me 
+// therefore this calls swipes to todays slide (on the right) when it loads
 swiper.slideNext();
